@@ -48,6 +48,10 @@ public class ContactUtils {
         ContactInfo contactInfo = new ContactInfo();
         contactInfo.setDisplayName(contactCursor.getString(contactCursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME)));
         String thumbnailUri = contactCursor.getString(contactCursor.getColumnIndex(ContactsContract.Contacts.PHOTO_THUMBNAIL_URI));
+        String photoUri = contactCursor.getString(contactCursor.getColumnIndex(ContactsContract.Contacts.PHOTO_URI));
+        boolean starred = contactCursor.getInt(contactCursor.getColumnIndex(ContactsContract.Contacts.STARRED)) == 1;
+        contactInfo.setPhotoUri(photoUri);
+        contactInfo.setStarred(starred);
         contactInfo.setPhotoThumbnailUri(thumbnailUri);
         return contactInfo;
     }
@@ -60,31 +64,4 @@ public class ContactUtils {
         return contactCursor.getString(contactCursor.getColumnIndex(ContactsContract.Contacts._ID));
     }
 
-
-    public static class ContactInfo{
-
-        private String photoThumbnailUri;
-        private String displayName;
-
-        public String getDisplayName() {
-            return displayName;
-        }
-
-        public void setDisplayName(String displayName) {
-            this.displayName = displayName;
-        }
-
-        public String getPhotoThumbnailUri() {
-            return photoThumbnailUri;
-        }
-
-        public void setPhotoThumbnailUri(String photoThumbnailUri) {
-            this.photoThumbnailUri = photoThumbnailUri;
-        }
-
-        @Override
-        public String toString() {
-            return displayName;
-        }
-    }
 }

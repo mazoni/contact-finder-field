@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 
 import java.util.List;
 
-public class ContactInfoAdapter extends ArrayAdapter<ContactUtils.ContactInfo> {
+public class ContactInfoAdapter extends ArrayAdapter<ContactInfo> {
 
 
     public ContactInfoAdapter(Context context, int resource) {
@@ -18,19 +18,19 @@ public class ContactInfoAdapter extends ArrayAdapter<ContactUtils.ContactInfo> {
         super(context, resource, textViewResourceId);
     }
 
-    public ContactInfoAdapter(Context context, int resource, ContactUtils.ContactInfo[] objects) {
+    public ContactInfoAdapter(Context context, int resource, ContactInfo[] objects) {
         super(context, resource, objects);
     }
 
-    public ContactInfoAdapter(Context context, int resource, int textViewResourceId, ContactUtils.ContactInfo[] objects) {
+    public ContactInfoAdapter(Context context, int resource, int textViewResourceId, ContactInfo[] objects) {
         super(context, resource, textViewResourceId, objects);
     }
 
-    public ContactInfoAdapter(Context context, int resource, List<ContactUtils.ContactInfo> objects) {
+    public ContactInfoAdapter(Context context, int resource, List<ContactInfo> objects) {
         super(context, resource, objects);
     }
 
-    public ContactInfoAdapter(Context context, int resource, int textViewResourceId, List<ContactUtils.ContactInfo> objects) {
+    public ContactInfoAdapter(Context context, int resource, int textViewResourceId, List<ContactInfo> objects) {
         super(context, resource, textViewResourceId, objects);
     }
 
