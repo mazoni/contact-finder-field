@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/mazoni/contact-finder-field.png?label=ready&title=Ready)](https://waffle.io/mazoni/contact-finder-field)
 contact-finder-field - WIP
 ====================
 
